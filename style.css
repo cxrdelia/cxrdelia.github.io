@@ -6,7 +6,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Roboto Mono";
 }
 
 /* Remove default margin */
@@ -69,8 +69,7 @@ select {
 }
 
 :focus {
-  outline: 2px dashed #00ff19;
-  outline-offset: 0.25rem;
+  outline: none;
 }
 
 main:focus {
@@ -128,6 +127,10 @@ header h1 {
     gap: 1.5rem;
     flex-wrap: wrap;
     padding-top: 1rem;
+
+    position: relative;
+    z-index: 10;
+    pointer-events: auto;
 }
 
 .navbar a {
@@ -146,6 +149,13 @@ header h1 {
 /* ==========================================
    4. TYPOGRAPHY
    ========================================== */
+
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #111827;
+}
 
 h2 {
     font-size: 1.5rem;
@@ -170,13 +180,30 @@ p {
 
   color: #063586;
   text-transform: uppercase;
+
+  pointer-events: none;
 }
+
+.editorial-subtitle {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+
+  transform: scaleY(1.5);
+  transform-origin: left;
+
+  color: #063586;
+  text-transform: uppercase;
+
+  pointer-events: none;
+}
+
 
 /* ==========================================
    5. COMPONENTS
    ========================================== */
 
-.project-card {
+/* .project-card {
     background-color: #f9fafb;
     border: 1px solid #e5e7eb;
     border-radius: 8px;
@@ -194,6 +221,75 @@ p {
     font-size: 1.2rem;
     color: #1f2937;
     margin-bottom: 0.5rem;
+} */
+
+.project-overview {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.project-types {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 180px;
+}
+
+.type-btn {
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+
+  color: #063586;
+  transition: color 0.2s ease;
+}
+
+.type-btn:hover,
+.type-btn.active {
+  text-decoration-line: underline;
+}
+
+.project-preview {
+  flex-grow: 1;
+}
+
+.gallery-group {
+  display: none;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+}
+.gallery-group.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.photo-card {
+  text-decoration: none;
+  display: block;
+}
+
+.photo-card:hover{
+  transform: translateY(-3px);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
 }
 
 /* ==========================================

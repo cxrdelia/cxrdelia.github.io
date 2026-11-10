@@ -7,9 +7,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -24,20 +26,49 @@
     <!--1. Header/hero section-->
     <header>
         <h1 class="editorial-title">CORDELIA WALDRON</h1>
-        <p>I'm a third year student at UC, studying Mechatronics Engineering and International Business</p>
+        <p>I'm a third year student at UC, studying Mechatronics Engineering and International Business.</p>
     </header>
 
-    <main>
-        <!--2. About section-->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>about me text</p>
-        </section>
-    </main>
+    <div class="project-overview">
+        <!--Project Type Menu-->
+        <div class="project-types">
+            <button class="type-btn active" data-category="eng">Engineering</button>
+            <button class="type-btn" data-category="commerce">Commerce</button>
+            <button class="type-btn" data-category="music">Music</button>
+            <button class="type-btn" data-category="other">Other</button>
+        </div>
 
-    <!--5. Footer-->
+        <!--Photo Preview-->
+        <div class="project-preview">
+            <div class="gallery-group active" id="eng">
+                <a href="project-eng-1.html" class="photo-card">
+                    <img src="images/project-eng-1.jpg" alt="Eng Project 1">
+                </a>
+            </div>
+
+            <div class="gallery-group" id="commerce">
+                <a href="project-commerce-1.html" class="photo-card">
+                    <img src="images/project-commerce-1.jpg" alt="Commerce Project 1">
+                </a>
+            </div>
+
+            <div class="gallery-group" id="music">
+                <a href="project-music-1.html" class="photo-card">
+                    <img src="images/project-music-1.jpg" alt="Music Project 1">
+                </a>
+            </div>
+
+            <div class="gallery-group" id="other">
+                <a href="project-other-1.html" class="photo-card">
+                    <img src="images/project-other-1.jpg" alt="Other Project 1">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
     <footer>
-        <p>2026 | Cordelia Waldron</p>
+        <p>&copy; 2026 | Cordelia Waldron</p>
     </footer>
 </body>
 </html>

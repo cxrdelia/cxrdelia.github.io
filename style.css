@@ -80,13 +80,10 @@ main:focus {
 
 
 /*
-
 CUSTOM STYLING
-
 */
 
 /* Page layout & background colour*/
-
 body {
     background-color: #faebd7;
     color: #1f2937;
@@ -158,4 +155,40 @@ footer {
     color: #9ca;
     font-size: 0.85rem;
     padding: 1.5rem;
+}
+
+/*
+NAVIGATION BAR
+*/
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: #111827;
+    font-weight: 700;
+}
+
+.navbar {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 1rem;
+}
+
+.navbar a {
+    color: #4b5563;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+    color: #2563eb;
 }
